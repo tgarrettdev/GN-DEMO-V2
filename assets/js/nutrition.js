@@ -559,3 +559,18 @@ nutritionFilterSelect.addEventListener('change', () => {
   const filteredItems = filterMenuItems(categoryFilter, nutritionFilter);
   displayMenuItems(filteredItems);
 });
+
+function showToast(message) {
+    const toastContainer = document.getElementById('toast-container');
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    toastContainer.appendChild(toast);
+  
+    toast.style.display = 'block';
+    setTimeout(() => {
+      toast.style.display = 'none';
+      toastContainer.removeChild(toast);
+    }, 3000);
+  }
+  
