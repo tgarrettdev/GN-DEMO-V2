@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+
+<!-- Existing HTML code... -->
+
+<div id="nutrition-modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modal-item-name"></h2>
+    <canvas id="nutrition-chart1"></canvas>
+    <canvas id="nutrition-chart2"></canvas>
+  </div>
+</div>
+
+<!-- Remaining HTML code... -->
+
+
+    <div class="container">
+      <div class="qr-container">
+        <img src="assets/img/grey.png" id="logo" alt="logo">
+      </div>
+      <div class="filters">
+        <button class="filter-btn active" data-filter="starters">Starters</button>
+        <button class="filter-btn" data-filter="mains">Mains</button>
+        <button class="filter-btn" data-filter="sides">Sides</button>
+        <button class="filter-btn" data-filter="desserts">Desserts</button>
+      </div>
+      <div class="nutrition-filter">
+        <label for="nutrition-filter-select">Nutrition:</label>
+        <select id="nutrition-filter-select">
+          <option value="all">All</option>
+          <option value="low-calorie">Low Calorie</option>
+          <option value="low-carb">Low Carb</option>
+          <option value="high-protein">High Protein</option>
+        </select>
+      </div>
+      <div class="allergen-filter">
+        <label for="allergen-filter-select">Allergens:</label>
+        <select id="allergen-filter-select">
+          <option value="all">All</option>
+          <option value="nuts">Does Not Contain Nuts</option>
+          <option value="dairy">Does Not Contain Dairy</option>
+          <option value="fish">Does Not Contain Fish</option>
+        </select>
+      </div>      
+      <div class="menu-items">
+        <!-- Menu items will be dynamically generated here -->
+      </div>
+    </div>
+    <script src="assets/js/nutrition.js"></script>
+  </body>
+</html>
